@@ -1,0 +1,49 @@
+import random
+
+def logic():
+    computer=assign(random.randint(1,3))
+    user=assign(user_choice)
+    print()
+    print(f"User choice: {user}")
+    print(f"Computer choice: {computer}")
+    print()
+    if user == computer:
+        print("Draw")
+
+    elif user == "stone":
+        if computer == "paper":
+            print("Computer wins")
+        else:
+            print("User wins")
+
+    elif user == "paper":
+        if computer == "scissor":
+            print("Computer wins")
+        else:
+            print("User wins")
+
+    elif user == "scissor":
+        if computer == "stone":
+            print("Computer wins")
+        else:
+            print("User wins")
+
+def assign(choice):
+    if choice == 1:
+        return "stone"
+    elif choice == 2:
+        return "paper"
+    elif choice == 3:
+        return "scissor"
+    else:
+        return None
+
+print("Welcome to Stone Paper Scissor Game")
+print("-----------------------------------")
+print("""
+Enter Choice:
+1. Stone        2. Paper        3. Scissor
+""")
+
+user_choice=int(input("Enter your choice (1-3): "))
+logic()
